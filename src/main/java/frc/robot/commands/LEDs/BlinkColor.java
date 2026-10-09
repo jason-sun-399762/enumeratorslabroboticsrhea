@@ -26,19 +26,23 @@ public final class BlinkColor extends Command {
 
   /** Creates a new BlinkColor. */
   public BlinkColor(LEDSubsystem led, Colors color) {
-    // your code here
+    this.led = led;
+    this.color = color;
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    // your code here
+    this.isOn = Ture;
+    
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    // your code here
+    if(blinkTimer.runoff()){
+      color = Colors.Black;
+    }
   }
 
   // Called once the command ends or is interrupted.
