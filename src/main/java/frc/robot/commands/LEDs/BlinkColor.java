@@ -42,7 +42,7 @@ public final class BlinkColor extends Command {
   @Override
   public void execute() {
     if(blinkTimer.hasElapsed(BLINK_TIME)){
-      this.isOn = Flase;
+      this.isOn = False;
       led.fillAndCommitColor(Colors.BLACK);
     }
   }
