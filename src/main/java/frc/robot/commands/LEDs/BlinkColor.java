@@ -34,14 +34,16 @@ public final class BlinkColor extends Command {
   @Override
   public void initialize() {
     this.isOn = Ture;
-    
+    Timer.reset();
+    led.fillAndCommitColor(color);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    if(blinkTimer.runoff()){
-      color = Colors.Black;
+    if(blinkTimer.hasElapsed(BLINK_TIME)){
+      this.isOn = Flase;
+      led.fillAndCommitColor(Colors.BLACK);
     }
   }
 
