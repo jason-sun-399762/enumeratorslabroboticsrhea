@@ -3,12 +3,12 @@ package frc.robot.parameters;
 import edu.wpi.first.wpilibj.util.Color8Bit;
 
 public enum Colors {
-    Red(255,0,0),
-    Green(0,255,0),
-    Blue(0,0,255),
-    Black(0,0,0),
-    White(255,255,255),
-    Yellow(255,255,0);
+    RED(255,0,0),
+    GREEN(0,255,0),
+    BLUE(0,0,255),
+    BLACK(0,0,0),
+    WHITE(255,255,255),
+    YELLOW(255,255,0);
 
     private Color8Bit color8Bit;
 
